@@ -1,15 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import { AppContainer } from "./styles"
+import { Column } from './ColumnComponent'
+import { Card } from './CardComponent';
+import { AppContainer } from "./styles";
 
-function App() {
+const App = () => {
   return (
     <AppContainer>
-      Columns will go here
+      <Column text="To Do">
+        <Card text="Generate app scaffold" />
+      </Column>
+      <Column text="In Progress">
+        <Card text="Learn Typescript" />
+      </Column>
+      <Column text="Done">
+        <Card text="Begin to use static typing" />
+      </Column>
     </AppContainer>
-
   );
 }
-
 export default App;
